@@ -1,17 +1,11 @@
-
-import pandas as pd
+from src.ingestion.excel_reader import read_excel_file
 
 FILE_PATH = 'data/raw/sales.xlsx'
 
 def main():
-    df = pd.read_excel(FILE_PATH)
+    df = read_excel_file(FILE_PATH)
 
-    print('\n Dataset info:')
-    df.info()
-
-    print('\nStat summary:')
-    print(df.describe())
-
+    
     print("\nFirst five rows:")
     print(df.head())
 
